@@ -12,8 +12,6 @@ def j(files)
 		a.concat(data)
 	end
 	File.open($fh, 'w') { |file| file.write(a.to_json) }
-
-	$fh.close()
 end
 
 def txt()
