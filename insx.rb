@@ -62,7 +62,9 @@ def Create(n)
 		all_cookies.each { | cookie |
         s1 = cookie.split('; ')[0];
         s2 = s1.split('=');
-        cookies_array.push({key:s2[0],value:s2[1]})
+		if s2[0] != 'target' then
+			cookies_array.push({key:s2[0],value:s2[1]})
+		end
     }
 		save({email:$email, cookie:cookies_array})
     end
